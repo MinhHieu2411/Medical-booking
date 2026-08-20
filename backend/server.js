@@ -4,6 +4,7 @@ import express from "express";
 import connectCloudinary from "./config/cloudinary.js";
 import connectDB from "./config/mongodb.js";
 import adminRouter from "./routes/adminRoute.js";
+
 //dns fix do loi dns tren may local
 import dns from "dns";
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
@@ -25,5 +26,7 @@ app.use("/api/admin", adminRouter);
 app.get("/", (req, res) => {
   res.send("API is abc");
 });
+//test
+
 
 app.listen(port, () => console.log("Server started", port));
